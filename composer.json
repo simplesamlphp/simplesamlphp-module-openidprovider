@@ -1,5 +1,5 @@
 {
-    "name": "simplesamlphp/simplesamlphp-module-openid-provider",
+    "name": "simplesamlphp/simplesamlphp-module-openidprovider",
     "description": "A SimpleSAMLphp module adding support for the OpenID protocoli as an Identity Provider.",
     "type": "simplesamlphp-module",
     "keywords": [ "openid", "provider" ],
