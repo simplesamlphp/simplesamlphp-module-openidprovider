@@ -15,6 +15,9 @@
             "email": "andreas.solberg@uninett.no"
         }
     ],
+    "extra": {
+        "ssp-mixedcase-module-name": "openidProvider"
+    },
     "require": {
         "simplesamlphp/composer-module-installer": "~1.0",
         "openid/php-openid": "dev-master#ee669c6a9d4d95b58ecd9b6945627276807694fb as 2.2.2"
