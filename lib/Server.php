@@ -338,12 +338,6 @@ class sspmod_openidProvider_Server {
 	public function loadState($stateId) {
 		assert('is_string($stateId)');
 
-		// sanitize the input
-		$sid = SimpleSAML_Utilities::parseStateID($stateId);
-		if (!is_null($sid['url'])) {
-			SimpleSAML_Utilities::checkURLAllowed($sid['url']);
-		}
-
 		return SimpleSAML_Auth_State::loadState($stateId, 'openidProvider:resumeState');
 	}
 
