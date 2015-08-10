@@ -4,10 +4,10 @@
  * Disable strict error reporting, since the OpenID library
  * used is PHP4-compatible, and not PHP5 strict-standards compatible.
  */
-SimpleSAML_Utilities::maskErrors(E_NOTICE | E_STRICT);
+sspmod_openidProvider_Utils::maskErrors(E_NOTICE | E_STRICT);
 if (defined('E_DEPRECATED')) {
 	/* PHP 5.3 also has E_DEPRECATED. */
-	SimpleSAML_Utilities::maskErrors(constant('E_DEPRECATED'));
+    sspmod_openidProvider_Utils::maskErrors(constant('E_DEPRECATED'));
 }
 
 /* Add the OpenID library search path. */
@@ -323,7 +323,7 @@ class sspmod_openidProvider_Server {
 
 		$stateId = SimpleSAML_Auth_State::saveState($state, 'openidProvider:resumeState');
 		$stateURL = SimpleSAML_Module::getModuleURL('openidProvider/' . $page);
-		$stateURL = SimpleSAML_Utilities::addURLparameter($stateURL, array('StateID' => $stateId));
+		$stateURL = \SimpleSAML\Utils\HTTP::addURLParameters($stateURL, array('StateID' => $stateId));
 
 		return $stateURL;
 	}
@@ -415,7 +415,7 @@ class sspmod_openidProvider_Server {
 			}
 
 			$trustURL = $this->getStateURL('trust.php', $state);
-			SimpleSAML_Utilities::redirectTrustedURL($trustURL);
+			\SimpleSAML\Utils\HTTP::redirectTrustedURL($trustURL);
 		}
 
 		if (!$trusted) {

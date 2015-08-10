@@ -15,7 +15,7 @@ if (!$userId && $identity) {
 	 * We are accessing the front-page, but are logged in.
 	 * Redirect to the correct page.
 	 */
-	SimpleSAML_Utilities::redirectTrustedURL($identity);
+	\SimpleSAML\Utils\HTTP::redirectTrustedURL($identity);
 }
 
 /* Determine whether we are at the users own page. */
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		}
 	}
 
-	SimpleSAML_Utilities::redirectTrustedURL($identity);
+	\SimpleSAML\Utils\HTTP::redirectTrustedURL($identity);
 }
 
 if ($ownPage) {
@@ -52,7 +52,7 @@ $userBase = SimpleSAML_Module::getModuleURL('openidProvider/user.php');
 
 $xrds = SimpleSAML_Module::getModuleURL('openidProvider/xrds.php');
 if ($userId !== FALSE) {
-	$xrds = SimpleSAML_Utilities::addURLparameter($xrds, array('user' => $userId));
+	$xrds = \SimpleSAML\Utils\HTTP::addURLParameters($xrds, array('user' => $userId));
 }
 
 $as = $server->getAuthSource();
