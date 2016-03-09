@@ -18,7 +18,7 @@ if (!$userId && $identity) {
 	\SimpleSAML\Utils\HTTP::redirectTrustedURL($identity);
 }
 
-/* Determine whether we are at the users own page. */
+// Determine whether we are at the users own page
 if ($userId && $userId === $server->getUserId()) {
 	$ownPage = TRUE;
 } else {

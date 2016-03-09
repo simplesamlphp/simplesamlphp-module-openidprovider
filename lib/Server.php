@@ -6,11 +6,11 @@
  */
 sspmod_openidProvider_Utils::maskErrors(E_NOTICE | E_STRICT);
 if (defined('E_DEPRECATED')) {
-	/* PHP 5.3 also has E_DEPRECATED. */
+	// PHP 5.3 also has E_DEPRECATED
     sspmod_openidProvider_Utils::maskErrors(constant('E_DEPRECATED'));
 }
 
-/* Add the OpenID library search path. */
+// Add the OpenID library search path.
 set_include_path(get_include_path() . PATH_SEPARATOR . dirname(dirname(dirname(dirname(__FILE__)))) . '/lib');
 include_once('Auth/OpenID/SReg.php');
 include_once('Auth/OpenID/AX.php');
@@ -18,7 +18,7 @@ include_once('Auth/OpenID/AX.php');
 /**
  * Helper class for the OpenID provider code.
  *
- * @package simpleSAMLphp
+ * @package SimpleSAMLphp
  * @version $Id$
  */
 class sspmod_openidProvider_Server {

@@ -5,10 +5,10 @@
 
 $config = array(
 
-	/* The authentication source that should be used. */
+	// The authentication source that should be used
 	'auth' => 'default-sp',
 
-	/* The name of the attribute which contains the username of the user. */
+	// The name of the attribute which contains the username of the user.
 	'username_attribute' => 'uid',
 
 	/* The directory where OpenID data is stored. */

@@ -1,7 +1,7 @@
 OpenID provider support
 =======================
 
-simpleSAMLphp can act as an OpenID provider.
+SimpleSAMLphp can act as an OpenID provider.
 This allows you to integrate OpenID into an existing IdP, or to add a bridge between OpenID and SAML 2.0.
 
 To use it, you need to enable the OpenID provider module:
@@ -48,7 +48,7 @@ Use that identifier with an OpenID consumer to test authentication.
 Delegation
 ----------
 
-The OpenID identifier created by the simpleSAMLphp OpenID provider is quite long and hard to type.
+The OpenID identifier created by the SimpleSAMLphp OpenID provider is quite long and hard to type.
 To use a simpler identifier, you can delegate accesses from the simple identifier to the OpenID provider.
 Your OpenID page will list two `<link>`-elements that you can add to any web page in order to turn it into your OpenID identifier.
 
