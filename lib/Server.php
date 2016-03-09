@@ -167,7 +167,7 @@ class sspmod_openidProvider_Server {
 			return NULL;
 		}
 
-		$identity = SimpleSAML_Module::getModuleURL('openidProvider/user.php/' . $userId);
+		$identity = SimpleSAML\Module::getModuleURL('openidProvider/user.php/' . $userId);
 		return $identity;
 	}
 
@@ -179,7 +179,7 @@ class sspmod_openidProvider_Server {
 	 */
 	public function getServerURL() {
 
-		return SimpleSAML_Module::getModuleURL('openidProvider/server.php');
+		return SimpleSAML\Module::getModuleURL('openidProvider/server.php');
 	}
 
 
@@ -322,7 +322,7 @@ class sspmod_openidProvider_Server {
 		assert('is_string($page)');
 
 		$stateId = SimpleSAML_Auth_State::saveState($state, 'openidProvider:resumeState');
-		$stateURL = SimpleSAML_Module::getModuleURL('openidProvider/' . $page);
+		$stateURL = SimpleSAML\Module::getModuleURL('openidProvider/' . $page);
 		$stateURL = \SimpleSAML\Utils\HTTP::addURLParameters($stateURL, array('StateID' => $stateId));
 
 		return $stateURL;
@@ -351,7 +351,7 @@ class sspmod_openidProvider_Server {
 	 */
 	private function sendResponse(Auth_OpenID_ServerResponse $response) {
 
-		SimpleSAML_Logger::debug('openidProvider::sendResponse');
+		SimpleSAML\Logger::debug('openidProvider::sendResponse');
 
 		$webresponse = $this->server->encodeResponse($response);
 

@@ -9,7 +9,7 @@ function openidProvider_hook_frontpage(&$links) {
 	assert('array_key_exists("links", $links)');
 
 	$links['auth'][] = array(
-		'href' => SimpleSAML_Module::getModuleURL('openidProvider/user.php'),
+		'href' => SimpleSAML\Module::getModuleURL('openidProvider/user.php'),
 		'text' => '{openidProvider:openidProvider:title_no_user}',
 	);
 }

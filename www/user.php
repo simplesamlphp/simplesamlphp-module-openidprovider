@@ -48,9 +48,9 @@ if ($ownPage) {
 	$trustedSites = array();
 }
 
-$userBase = SimpleSAML_Module::getModuleURL('openidProvider/user.php');
+$userBase = SimpleSAML\Module::getModuleURL('openidProvider/user.php');
 
-$xrds = SimpleSAML_Module::getModuleURL('openidProvider/xrds.php');
+$xrds = SimpleSAML\Module::getModuleURL('openidProvider/xrds.php');
 if ($userId !== FALSE) {
 	$xrds = \SimpleSAML\Utils\HTTP::addURLParameters($xrds, array('user' => $userId));
 }

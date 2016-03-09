@@ -39,7 +39,7 @@ foreach ($serviceTypes as $t) {
 echo('<URI>' . htmlspecialchars($serverURL) . '</URI>');
 
 if ($user !== NULL) {
-	$localId = SimpleSAML_Module::getModuleURL('openidProvider/user.php') . '/' . $user;
+	$localId = SimpleSAML\Module::getModuleURL('openidProvider/user.php') . '/' . $user;
 	echo('<LocalID>' . htmlspecialchars($localId) . '</LocalID>');
 }
 
