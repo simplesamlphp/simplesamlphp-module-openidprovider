@@ -15,6 +15,11 @@
             "email": "andreas.solberg@uninett.no"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "SimpleSAML\\Module\\openidprovider\\": "lib/"
+        }
+    },
     "extra": {
         "ssp-mixedcase-module-name": "openidProvider"
     },
