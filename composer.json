@@ -20,7 +20,11 @@
     },
     "require": {
         "simplesamlphp/composer-module-installer": "~1.0",
-        "openid/php-openid": "dev-master#ee669c6a9d4d95b58ecd9b6945627276807694fb as 2.2.2"
+        "openid/php-openid": "~2.3.0"
+    },
+    "require-dev": {
+        "simplesamlphp/simplesamlphp": "~1.17",
+        "simplesamlphp/simplesamlphp-test-framework": "~0.0.10"
     }
 }
 
