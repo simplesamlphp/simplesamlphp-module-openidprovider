@@ -1,14 +1,14 @@
 <?php
 
+namespace SimpleSAML\Module\openidprovider;
 
 /**
  * Helper class for OpenID.
  *
  * @author Jaime Perez, UNINETT AS <jaime.perez@uninett.no>
  */
-class sspmod_openidProvider_Utils
+class ProviderUtils
 {
-
     /**
      * List of log levels.
      *
@@ -16,8 +16,7 @@ class sspmod_openidProvider_Utils
      *
      * @var array
      */
-    private static $logLevelStack = array();
-
+    private static $logLevelStack = [];
 
     /**
      * The current mask of disabled log levels.
@@ -47,7 +46,7 @@ class sspmod_openidProvider_Utils
         }
 
         $currentEnabled = error_reporting();
-        self::$logLevelStack[] = array($currentEnabled, self::$logMask);
+        self::$logLevelStack[] = [$currentEnabled, self::$logMask];
 
         $currentEnabled &= ~$mask;
         error_reporting($currentEnabled);
