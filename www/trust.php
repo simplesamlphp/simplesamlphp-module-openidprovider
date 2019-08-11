@@ -5,7 +5,7 @@ if (!is_string($_REQUEST['StateID'])) {
 }
 $StateID = $_REQUEST['StateID'];
 
-$server = ProviderServer::getInstance();
+$server = \SimpleSAML\Module\openidprovider\ProviderServer::getInstance();
 $state = $server->loadState($_REQUEST['StateID']);
 
 $trustRoot = $state['request']->trust_root;

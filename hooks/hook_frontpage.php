@@ -3,6 +3,7 @@
  * Hook to add the OpenID provider to the authentication tab.
  *
  * @param array &$links  The links on the frontpage, split into sections.
+ * @return void
  */
 function openidProvider_hook_frontpage(&$links)
 {

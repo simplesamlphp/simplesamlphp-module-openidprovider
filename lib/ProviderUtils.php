@@ -36,6 +36,7 @@ class ProviderUtils
      * @param int $mask The log levels that should be masked.
      *
      * @throws \InvalidArgumentException If $mask is not an integer.
+     * @return void
      *
      * @author Olav Morken, UNINETT AS <olav.morken@uninett.no>
      */
@@ -59,6 +60,7 @@ class ProviderUtils
      *
      * This function restores the previous error mask.
      *
+     * @return void
      * @author Olav Morken, UNINETT AS <olav.morken@uninett.no>
      */
     public static function popErrorMask()

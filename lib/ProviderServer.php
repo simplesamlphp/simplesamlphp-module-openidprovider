@@ -106,7 +106,7 @@ class ProviderServer
         try {
             $store = new \Auth_OpenID_FileStore($config->getString('filestore'));
             $this->server = new \Auth_OpenID_Server($store, $this->getServerURL());
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             throw $e;
         }
 
@@ -300,7 +300,7 @@ class ProviderServer
 
         $i = array_search($trustRoot, $trs, true);
         if ($i === false) {
-            return null;
+            return;
         }
         array_splice($trs, $i, 1, []);
         $this->saveTrustRoots($identity, $trs);
@@ -362,7 +362,7 @@ class ProviderServer
      *
      * This function never returns.
      *
-     * @param Auth_OpenID_ServerResponse $response  The response.
+     * @param \Auth_OpenID_ServerResponse $response  The response.
      * @return void
      */
     private function sendResponse(\Auth_OpenID_ServerResponse $response)
