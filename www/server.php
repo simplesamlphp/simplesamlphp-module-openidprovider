@@ -2,5 +2,5 @@
 
 \SimpleSAML\Logger::info('OpenID - Provider: Accessing OpenID Provider endpoint');
 
-$server = ProviderServer::getInstance();
+$server = \SimpleSAML\Module\openidprovider\ProviderServer::getInstance();
 $server->receiveRequest();

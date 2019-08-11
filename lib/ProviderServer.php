@@ -57,7 +57,7 @@ class ProviderServer
     /**
      * The OpenID server.
      *
-     * @var Auth_OpenID_Server
+     * @var \Auth_OpenID_Server
      */
     private $server;
 
@@ -71,9 +71,9 @@ class ProviderServer
     /**
      * The instance of the OpenID provider class.
      *
-     * @var ProviderServer
+     * @var ProviderServer|null
      */
-    private static $instance;
+    private static $instance = null;
 
 
     /**
@@ -104,9 +104,9 @@ class ProviderServer
         $this->authProc = ['authproc' => $config->getArray('authproc', [])];
 
         try {
-            $store = new Auth_OpenID_FileStore($config->getString('filestore'));
-            $this->server = new Auth_OpenID_Server($store, $this->getServerURL());
-        } catch (Exception $e) {
+            $store = new \Auth_OpenID_FileStore($config->getString('filestore'));
+            $this->server = new \Auth_OpenID_Server($store, $this->getServerURL());
+        } catch (\Exception $e) {
             throw $e;
         }
 
@@ -134,7 +134,7 @@ class ProviderServer
     /**
      * Retrieve the current user ID.
      *
-     * @return string  The current user ID, or NULL if the user isn't authenticated.
+     * @return string|null  The current user ID, or NULL if the user isn't authenticated.
      */
     public function getUserId()
     {
@@ -164,7 +164,7 @@ class ProviderServer
     /**
      * Retrieve the current identity.
      *
-     * @return string  The current identity, or NULL if the user isn't authenticated.
+     * @return string|null  The current identity, or NULL if the user isn't authenticated.
      */
     public function getIdentity()
     {
@@ -209,6 +209,7 @@ class ProviderServer
      *
      * @param string $identity  The identity of the user.
      * @param array $trustRoots  The trust roots the user trusts.
+     * @return void
      */
     public function saveTrustRoots($identity, array $trustRoots)
     {
@@ -267,6 +268,7 @@ class ProviderServer
      *
      * @param string $identity  The identity of the user.
      * @param string $trustRoot  The trust root.
+     * @return void
      */
     public function addTrustRoot($identity, $trustRoot)
     {
@@ -287,6 +289,7 @@ class ProviderServer
      *
      * @param string $identity  The identity of the user.
      * @param string $trustRoot  The trust root.
+     * @return void
      */
     public function removeTrustRoot($identity, $trustRoot)
     {
@@ -309,7 +312,7 @@ class ProviderServer
      *
      * @param string $identity  The identity of the user.
      * @param string $trustRoot  The trust root.
-     * @return TRUE if it is trusted, FALSE if not.
+     * @return bool TRUE if it is trusted, FALSE if not.
      */
     private function isTrusted($identity, $trustRoot)
     {
@@ -344,7 +347,7 @@ class ProviderServer
      * Retrieve state by ID.
      *
      * @param string $stateId  The state ID.
-     * @return array  The state array.
+     * @return array|null  The state array.
      */
     public function loadState($stateId)
     {
@@ -359,9 +362,10 @@ class ProviderServer
      *
      * This function never returns.
      *
-     * @param Auth_OpenID_ServerResponse $response  The response.
+     * @param \Auth_OpenID_ServerResponse $response  The response.
+     * @return void
      */
-    private function sendResponse(Auth_OpenID_ServerResponse $response)
+    private function sendResponse(\Auth_OpenID_ServerResponse $response)
     {
         Logger::debug('openidProvider::sendResponse');
 
@@ -387,6 +391,7 @@ class ProviderServer
      * This function never returns.
      *
      * @param Auth_OpenID_Request $request  The request we are processing.
+     * @return void
      */
     public function processRequest(array $state)
     {
@@ -394,8 +399,8 @@ class ProviderServer
 
         $request = $state['request'];
 
-        $sreg_req = Auth_OpenID_SRegRequest::fromOpenIDRequest($request);
-        $ax_req = Auth_OpenId_AX_FetchRequest::fromOpenIDRequest($request);
+        $sreg_req = \Auth_OpenID_SRegRequest::fromOpenIDRequest($request);
+        $ax_req = \Auth_OpenID_AX_FetchRequest::fromOpenIDRequest($request);
     
         /* In resume.php there should be a way to display data requested through sreg or ax. */
 
@@ -479,6 +484,7 @@ class ProviderServer
      * Receive an incoming request.
      *
      * This function never returns.
+     * @return void
      */
     public function receiveRequest()
     {

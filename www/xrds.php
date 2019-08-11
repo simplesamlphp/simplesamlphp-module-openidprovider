@@ -21,7 +21,7 @@ if (isset($_REQUEST['user'])) {
     ];
 }
 
-$server = ProviderServer::getInstance();
+$server = \SimpleSAML\Module\openidprovider\ProviderServer::getInstance();
 
 $serverURL = $server->getServerURL();
 
