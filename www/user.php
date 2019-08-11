@@ -7,7 +7,7 @@ if (isset($_SERVER['PATH_INFO'])) {
 }
 
 $globalConfig = \SimpleSAML\Configuration::getInstance();
-$server = ProviderServer::getInstance();
+$server = \SimpleSAML\Module\openidprovider\ProviderServer::getInstance();
 $identity = $server->getIdentity();
 
 if (!$userId && $identity) {

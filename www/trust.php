@@ -14,7 +14,6 @@ if ($identity === null) {
     $server->processRequest($state);
 }
 
-
 if (isset($_REQUEST['TrustYes'])) {
     if (isset($_REQUEST['TrustRemember'])) {
         $server->addTrustRoot($identity, $trustRoot);
