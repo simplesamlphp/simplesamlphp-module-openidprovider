@@ -1,0 +1,65 @@
+
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SimpleSAMLphp 1.15\n"
+"Report-Msgid-Bugs-To: simplesamlphp-translation@googlegroups.com\n"
+"POT-Creation-Date: 2020-02-21 19:59+0100\n"
+"PO-Revision-Date: 2020-02-21 19:59+0100\n"
+"Last-Translator: \n"
+"Language: ja\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+msgid "{openidProvider:title_no_user}"
+msgstr "OpenIDプロバイダ"
+
+msgid "{openidProvider:title_user}"
+msgstr "%USERID% の OpenID"
+
+msgid "{openidProvider:user_page_for}"
+msgstr "ここはO<code>%USERID%</code>のOpenIDユーザーページです。"
+
+msgid "{openidProvider:view_own_page}"
+msgstr "あなたのOpenIDページを参照。"
+
+msgid "{openidProvider:login_view_own_page}"
+msgstr "あなたのOpenIDページを参照する為にログイン。"
+
+msgid "{openidProvider:your_identifier}"
+msgstr "OpenID識別子でログインする為に以下のIDを識別子を使用します。"
+
+msgid "{openidProvider:howto_delegate}"
+msgstr "さらに、このOpenIDプロバイダを使用する為に別の識別子に委任することが出来ます。これを行うには、あなたはWEBページの<code>&lt;head&gt;</code>要素に以下の識別子を追加する必要が有ります。"
+
+msgid "{openidProvider:logout_title}"
+msgstr "ログアウト"
+
+msgid "{openidProvider:logout}"
+msgstr "クリックしてOpenIDユーザをログアウトします。"
+
+msgid "{openidProvider:confirm_question}"
+msgstr "%SITEURL% へログインしますか?"
+
+msgid "{openidProvider:remember}"
+msgstr "この設定を記憶する"
+
+msgid "{openidProvider:confirm}"
+msgstr "確認"
+
+msgid "{openidProvider:notconfirm}"
+msgstr "確認しない"
+
+msgid "{openidProvider:trustlist_trustedsites}"
+msgstr "信頼されているサイト"
+
+msgid "{openidProvider:trustlist_remove}"
+msgstr "削除"
+
+msgid "{openidProvider:trustlist_nosites}"
+msgstr "信頼されているサイトはありません。あなたがサイトに認証を行う際、あなたはリストに追加された<q>記憶した決定</q>から選択する事が出来ます。"
+

@@ -1,0 +1,71 @@
+
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SimpleSAMLphp 1.15\n"
+"Report-Msgid-Bugs-To: simplesamlphp-translation@googlegroups.com\n"
+"POT-Creation-Date: 2020-02-21 19:59+0100\n"
+"PO-Revision-Date: 2020-02-21 19:59+0100\n"
+"Last-Translator: \n"
+"Language: pt\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+msgid "{openidProvider:title_no_user}"
+msgstr "Fornecedor de Identidades OpenID"
+
+msgid "{openidProvider:title_user}"
+msgstr "OpenID para %USERID%"
+
+msgid "{openidProvider:user_page_for}"
+msgstr "Está na página de OpenID do utilizador <code>%USERID%</code>"
+
+msgid "{openidProvider:view_own_page}"
+msgstr "Ver a sua página de OpenID."
+
+msgid "{openidProvider:login_view_own_page}"
+msgstr "Efectue a entrada para ver a sua página de OpenID."
+
+msgid "{openidProvider:your_identifier}"
+msgstr "Para efectuar a entrada com OpenID, utilize o seguinte identificador:"
+
+msgid "{openidProvider:howto_delegate}"
+msgstr ""
+"Pode também delegar este fornecedor de Identidades OpenID noutro "
+"identificador. Para o fazer, necessita de adicionar o seguinte texto no "
+"elemento <code>&lt;head&gt;</code> da página web desse novo "
+"identificador."
+
+msgid "{openidProvider:logout_title}"
+msgstr "Sair"
+
+msgid "{openidProvider:logout}"
+msgstr "Carregue aqui para sair desta página de utilizador OpenID."
+
+msgid "{openidProvider:confirm_question}"
+msgstr "Pretende efectuar a entrada em %SITEURL%?"
+
+msgid "{openidProvider:remember}"
+msgstr "Lembrar esta decisão"
+
+msgid "{openidProvider:confirm}"
+msgstr "Confirmar"
+
+msgid "{openidProvider:notconfirm}"
+msgstr "Não confirmar"
+
+msgid "{openidProvider:trustlist_trustedsites}"
+msgstr "Sites confiáveis"
+
+msgid "{openidProvider:trustlist_remove}"
+msgstr "Remover"
+
+msgid "{openidProvider:trustlist_nosites}"
+msgstr ""
+"Lista de sites confiáveis vazia. Quando se autenticar num site, pode "
+"adicioná-lo a esta lista escolhendo <q>Lembrar esta decisão</q>."
+

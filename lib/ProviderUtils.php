@@ -40,12 +40,8 @@ class ProviderUtils
      *
      * @author Olav Morken, UNINETT AS <olav.morken@uninett.no>
      */
-    public static function maskErrors($mask)
+    public static function maskErrors(int $mask): void
     {
-        if (!is_int($mask)) {
-            throw new \InvalidArgumentException('Invalid input parameters.');
-        }
-
         $currentEnabled = error_reporting();
         self::$logLevelStack[] = [$currentEnabled, self::$logMask];
 
@@ -63,7 +59,7 @@ class ProviderUtils
      * @return void
      * @author Olav Morken, UNINETT AS <olav.morken@uninett.no>
      */
-    public static function popErrorMask()
+    public static function popErrorMask(): void
     {
         $lastMask = array_pop(self::$logLevelStack);
         error_reporting($lastMask[0]);

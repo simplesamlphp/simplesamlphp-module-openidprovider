@@ -26,12 +26,12 @@
         "ssp-mixedcase-module-name": "openidProvider"
     },
     "require": {
+        "openid/php-openid": "~3.0.0",
         "simplesamlphp/composer-module-installer": "~1.0",
-        "openid/php-openid": "~2.3.0"
+        "simplesamlphp/simplesamlphp": "dev-master"
     },
     "require-dev": {
-        "simplesamlphp/simplesamlphp": "~1.17",
-        "simplesamlphp/simplesamlphp-test-framework": "~0.0.10"
+        "simplesamlphp/simplesamlphp-test-framework": "~0.1.0"
     }
 }
 

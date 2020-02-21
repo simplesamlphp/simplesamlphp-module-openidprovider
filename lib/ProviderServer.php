@@ -81,7 +81,7 @@ class ProviderServer
      *
      * @return ProviderServer  The OpenID Provider class.
      */
-    public static function getInstance()
+    public static function getInstance(): ProviderServer
     {
         if (self::$instance === null) {
             self::$instance = new ProviderServer();
@@ -110,11 +110,11 @@ class ProviderServer
             throw $e;
         }
 
-        $this->trustStoreDir = realpath($config->getString('filestore')).'/truststore';
+        $this->trustStoreDir = realpath($config->getString('filestore')) . '/truststore';
         if (!is_dir($this->trustStoreDir)) {
             $res = mkdir($this->trustStoreDir, 0777, true);
             if (!$res) {
-                throw new Error\Exception('Failed to create directory: '.$this->trustStoreDir);
+                throw new Error\Exception('Failed to create directory: ' . $this->trustStoreDir);
             }
         }
     }
@@ -125,7 +125,7 @@ class ProviderServer
      *
      * @return \SimpleSAML\Auth\Simple  The authentication source.
      */
-    public function getAuthSource()
+    public function getAuthSource(): \SimpleSAML\Auth\Simple
     {
         return $this->authSource;
     }
@@ -136,7 +136,7 @@ class ProviderServer
      *
      * @return string|null  The current user ID, or NULL if the user isn't authenticated.
      */
-    public function getUserId()
+    public function getUserId(): ?string
     {
         if (!$this->authSource->isAuthenticated()) {
             return null;
@@ -144,8 +144,8 @@ class ProviderServer
 
         $attributes = $this->authSource->getAttributes();
         if (!array_key_exists($this->usernameAttribute, $attributes)) {
-            throw new Error\Exception('Missing username attribute '.
-                var_export($this->usernameAttribute, true).' in the attributes of the user.');
+            throw new Error\Exception('Missing username attribute ' .
+                var_export($this->usernameAttribute, true) . ' in the attributes of the user.');
         }
 
         $values = array_values($attributes[$this->usernameAttribute]);
@@ -156,8 +156,7 @@ class ProviderServer
             throw new Error\Exception('More than one attribute value in username.');
         }
 
-        $userId = $values[0];
-        return $userId;
+        return $values[0];
     }
 
 
@@ -166,15 +165,14 @@ class ProviderServer
      *
      * @return string|null  The current identity, or NULL if the user isn't authenticated.
      */
-    public function getIdentity()
+    public function getIdentity(): ?string
     {
         $userId = $this->getUserId();
         if ($userId === null) {
             return null;
         }
 
-        $identity = Module::getModuleURL('openidProvider/user.php/' . $userId);
-        return $identity;
+        return Module::getModuleURL('openidProvider/user.php/' . $userId);
     }
 
 
@@ -183,7 +181,7 @@ class ProviderServer
      *
      * @return string  The URL of the OpenID server.
      */
-    public function getServerURL()
+    public function getServerURL(): string
     {
         return Module::getModuleURL('openidProvider/server.php');
     }
@@ -195,12 +193,9 @@ class ProviderServer
      * @param string $identity  The identity of the user.
      * @return string  The file name.
      */
-    private function getTrustFile($identity)
+    private function getTrustFile(string $identity): string
     {
-        assert('is_string($identity)');
-
-        $path = $this->trustStoreDir . '/' . sha1($identity) . '.serialized';
-        return $path;
+        return $this->trustStoreDir . '/' . sha1($identity) . '.serialized';
     }
 
 
@@ -211,10 +206,8 @@ class ProviderServer
      * @param array $trustRoots  The trust roots the user trusts.
      * @return void
      */
-    public function saveTrustRoots($identity, array $trustRoots)
+    public function saveTrustRoots(string $identity, array $trustRoots): void
     {
-        assert('is_string($identity)');
-
         $file = $this->getTrustFile($identity);
         $tmpFile = $file . '.new.' . getmypid();
 
@@ -222,13 +215,13 @@ class ProviderServer
 
         $ok = file_put_contents($tmpFile, $data);
         if ($ok === false) {
-            throw new Error\Exception('Failed to save file '.var_export($tmpFile, true));
+            throw new Error\Exception('Failed to save file ' . var_export($tmpFile, true));
         }
 
         $ok = rename($tmpFile, $file);
         if ($ok === false) {
-            throw new Error\Exception('Failed rename '.var_export($tmpFile, true).
-                ' to '.var_export($file, true).'.');
+            throw new Error\Exception('Failed rename ' . var_export($tmpFile, true) .
+                ' to ' . var_export($file, true) . '.');
         }
     }
 
@@ -239,10 +232,8 @@ class ProviderServer
      * @param string $identity  The identity of the user.
      * @return array  The trust roots the user trusts.
      */
-    public function getTrustRoots($identity)
+    public function getTrustRoots(string $identity): array
     {
-        assert('is_string($identity)');
-
         $file = $this->getTrustFile($identity);
 
         if (!file_exists($file)) {
@@ -251,12 +242,12 @@ class ProviderServer
 
         $data = file_get_contents($file);
         if ($data === false) {
-            throw new Error\Exception('Failed to load file '.var_export($file, true).'.');
+            throw new Error\Exception('Failed to load file ' . var_export($file, true) . '.');
         }
 
         $data = unserialize($data);
         if ($data === false) {
-            throw new Error\Exception('Error unserializing trust roots from file '.var_export($file, true).'.');
+            throw new Error\Exception('Error unserializing trust roots from file ' . var_export($file, true) . '.');
         }
 
         return $data;
@@ -270,11 +261,8 @@ class ProviderServer
      * @param string $trustRoot  The trust root.
      * @return void
      */
-    public function addTrustRoot($identity, $trustRoot)
+    public function addTrustRoot(string $identity, string $trustRoot): void
     {
-        assert('is_string($identity)');
-        assert('is_string($trustRoot)');
-
         $trs = $this->getTrustRoots($identity);
         if (!in_array($trustRoot, $trs, true)) {
             $trs[] = $trustRoot;
@@ -291,11 +279,8 @@ class ProviderServer
      * @param string $trustRoot  The trust root.
      * @return void
      */
-    public function removeTrustRoot($identity, $trustRoot)
+    public function removeTrustRoot(string $identity, string $trustRoot): void
     {
-        assert('is_string($identity)');
-        assert('is_string($trustRoot)');
-
         $trs = $this->getTrustRoots($identity);
 
         $i = array_search($trustRoot, $trs, true);
@@ -314,11 +299,8 @@ class ProviderServer
      * @param string $trustRoot  The trust root.
      * @return bool TRUE if it is trusted, FALSE if not.
      */
-    private function isTrusted($identity, $trustRoot)
+    private function isTrusted(string $identity, string $trustRoot): bool
     {
-        assert('is_string($identity)');
-        assert('is_string($trustRoot)');
-
         $trs = $this->getTrustRoots($identity);
         return in_array($trustRoot, $trs, true);
     }
@@ -331,15 +313,11 @@ class ProviderServer
      * @param array $state  The state array.
      * @return string  A URL with the state ID as a parameter.
      */
-    private function getStateURL($page, array $state)
+    private function getStateURL(string $page, array $state): string
     {
-        assert('is_string($page)');
-
         $stateId = Auth\State::saveState($state, 'openidProvider:resumeState');
         $stateURL = Module::getModuleURL('openidProvider/' . $page);
-        $stateURL = Utils\HTTP::addURLParameters($stateURL, ['StateID' => $stateId]);
-
-        return $stateURL;
+        return Utils\HTTP::addURLParameters($stateURL, ['StateID' => $stateId]);
     }
 
 
@@ -349,10 +327,8 @@ class ProviderServer
      * @param string $stateId  The state ID.
      * @return array|null  The state array.
      */
-    public function loadState($stateId)
+    public function loadState(string $stateId): ?array
     {
-        assert('is_string($stateId)');
-
         return Auth\State::loadState($stateId, 'openidProvider:resumeState');
     }
 
@@ -365,7 +341,7 @@ class ProviderServer
      * @param \Auth_OpenID_ServerResponse $response  The response.
      * @return void
      */
-    private function sendResponse(\Auth_OpenID_ServerResponse $response)
+    private function sendResponse(\Auth_OpenID_ServerResponse $response): void
     {
         Logger::debug('openidProvider::sendResponse');
 
@@ -390,18 +366,18 @@ class ProviderServer
      *
      * This function never returns.
      *
-     * @param Auth_OpenID_Request $request  The request we are processing.
+     * @param array $state
      * @return void
      */
-    public function processRequest(array $state)
+    public function processRequest(array $state): void
     {
-        assert('isset($state["request"])');
+        assert(isset($state["request"]));
 
         $request = $state['request'];
 
         $sreg_req = \Auth_OpenID_SRegRequest::fromOpenIDRequest($request);
         $ax_req = \Auth_OpenID_AX_FetchRequest::fromOpenIDRequest($request);
-    
+
         /* In resume.php there should be a way to display data requested through sreg or ax. */
 
         if (!$this->authSource->isAuthenticated()) {
@@ -415,7 +391,7 @@ class ProviderServer
         }
 
         $identity = $this->getIdentity();
-        assert('$identity !== false'); /* Should always be logged in here. */
+        assert($identity !== false); /* Should always be logged in here. */
 
         if (!$request->idSelect() && $identity !== $request->identity) {
             /* The identity in the request doesn't match the one of the logged in user. */
@@ -440,12 +416,12 @@ class ProviderServer
             /* The user doesn't trust this site. */
             $this->sendResponse($request->answer(false));
         }
-      
+
         $response = $request->answer(true, null, $identity);
 
         // Process attributes
         $attributes = $this->authSource->getAttributes();
-        foreach ($attributes as $key=>$attr) {
+        foreach ($attributes as $key => $attr) {
             if (is_array($attr) && count($attr) === 1) {
                 $attributes[$key] = $attr[0];
             }
@@ -486,7 +462,7 @@ class ProviderServer
      * This function never returns.
      * @return void
      */
-    public function receiveRequest()
+    public function receiveRequest(): void
     {
         $request = $this->server->decodeRequest();
 

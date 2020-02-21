@@ -1,0 +1,72 @@
+
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SimpleSAMLphp 1.15\n"
+"Report-Msgid-Bugs-To: simplesamlphp-translation@googlegroups.com\n"
+"POT-Creation-Date: 2020-02-21 19:59+0100\n"
+"PO-Revision-Date: 2020-02-21 19:59+0100\n"
+"Last-Translator: \n"
+"Language: id\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+msgid "{openidProvider:title_no_user}"
+msgstr "Provider OpenID"
+
+msgid "{openidProvider:title_user}"
+msgstr "OpenID untuk %USERID%"
+
+msgid "{openidProvider:user_page_for}"
+msgstr "Ini adalah halaman pengguna OpenID untuk <code>%USERID%</code>."
+
+msgid "{openidProvider:view_own_page}"
+msgstr "Lihat halaman OpenID anda."
+
+msgid "{openidProvider:login_view_own_page}"
+msgstr "Log in untuk melihat halaman OpenID Anda."
+
+msgid "{openidProvider:your_identifier}"
+msgstr "Untuk log in dengan identifier OpenID anda, gunakan identifier berikut :"
+
+msgid "{openidProvider:howto_delegate}"
+msgstr ""
+"Anda juga dapat mendelegasikan pengidentifikasi yang berbeda untuk "
+"menggunakan provider OpenID ini. Untuk melakukan hal itu, anda harus "
+"menambahkan <code>&lt;head&gt;</code>-element ke halaman web "
+"pengidentifikasi tersebut."
+
+msgid "{openidProvider:logout_title}"
+msgstr "Log out"
+
+msgid "{openidProvider:logout}"
+msgstr "Klik disini untuk log out dari user OpenID anda."
+
+msgid "{openidProvider:confirm_question}"
+msgstr "Apakah anda ingin log in ke %SITEURL%?"
+
+msgid "{openidProvider:remember}"
+msgstr "Ingat pilihan ini."
+
+msgid "{openidProvider:confirm}"
+msgstr "Konfirmasi"
+
+msgid "{openidProvider:notconfirm}"
+msgstr "Jangan konfirmasi"
+
+msgid "{openidProvider:trustlist_trustedsites}"
+msgstr "Situs yang dipercayai"
+
+msgid "{openidProvider:trustlist_remove}"
+msgstr "Buang"
+
+msgid "{openidProvider:trustlist_nosites}"
+msgstr ""
+"Tidak ada situs yang dipercayai. Ketika anda melakukan autentifikasi pada"
+" suatu situs, anda dapat memilih untuk menambahkannya ke daftar ini "
+"dengan memilih <q>Remember this decision</q>."
+

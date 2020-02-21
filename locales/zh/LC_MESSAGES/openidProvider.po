@@ -1,0 +1,65 @@
+
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SimpleSAMLphp 1.15\n"
+"Report-Msgid-Bugs-To: simplesamlphp-translation@googlegroups.com\n"
+"POT-Creation-Date: 2020-02-21 19:59+0100\n"
+"PO-Revision-Date: 2020-02-21 19:59+0100\n"
+"Last-Translator: \n"
+"Language: zh\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+msgid "{openidProvider:title_no_user}"
+msgstr "OpenID提供者"
+
+msgid "{openidProvider:title_user}"
+msgstr "%USERID%的OpenID"
+
+msgid "{openidProvider:user_page_for}"
+msgstr "这是<code>%USERID%</code>的OpenID的用户页面"
+
+msgid "{openidProvider:view_own_page}"
+msgstr "访问你自己的OpenID页面"
+
+msgid "{openidProvider:login_view_own_page}"
+msgstr "登录以访问你自己的OpenID页面"
+
+msgid "{openidProvider:your_identifier}"
+msgstr "选择如下的标志，使用你自己的OpenID标志登录"
+
+msgid "{openidProvider:howto_delegate}"
+msgstr "你可以授权一个不同的标识符，来使用这个OpenID提供者，为此你需要在那个标识符<code>&lt;head&gt;</code>元素中添加下列信息"
+
+msgid "{openidProvider:logout_title}"
+msgstr "登出"
+
+msgid "{openidProvider:logout}"
+msgstr "点击这里登出你的OpenID"
+
+msgid "{openidProvider:confirm_question}"
+msgstr "你想登录至%SITEURL%"
+
+msgid "{openidProvider:remember}"
+msgstr "记住这个决定"
+
+msgid "{openidProvider:confirm}"
+msgstr "确认"
+
+msgid "{openidProvider:notconfirm}"
+msgstr "不确认"
+
+msgid "{openidProvider:trustlist_trustedsites}"
+msgstr "信任站点"
+
+msgid "{openidProvider:trustlist_remove}"
+msgstr "移除"
+
+msgid "{openidProvider:trustlist_nosites}"
+msgstr "没有信任站点，当你认证一个站点的时候，你可以选择增加至信任列表通过选择<q>记住这个决定</q>"
+

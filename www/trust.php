@@ -29,7 +29,7 @@ if (isset($_REQUEST['TrustNo'])) {
 }
 
 $globalConfig = \SimpleSAML\Configuration::getInstance();
-$t = new \SimpleSAML\XHTML\Template($globalConfig, 'openidProvider:trust.tpl.php');
+$t = new \SimpleSAML\XHTML\Template($globalConfig, 'openidProvider:trust.twig');
 $t->data['StateID'] = $_REQUEST['StateID'];
 $t->data['trustRoot'] = $trustRoot;
-$t->show();
+$t->send();

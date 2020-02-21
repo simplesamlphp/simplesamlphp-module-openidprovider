@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
 
             $site = $op[1];
-            $site = pack("H*" , $site);
+            $site = pack("H*", $site);
             $server->removeTrustRoot($identity, $site);
         }
     }
@@ -56,7 +56,7 @@ if ($userId !== false) {
 }
 
 $as = $server->getAuthSource();
-$t = new \SimpleSAML\XHTML\Template($globalConfig, 'openidProvider:user.tpl.php');
+$t = new \SimpleSAML\XHTML\Template($globalConfig, 'openidProvider:user.twig');
 $t->data['identity'] = $identity;
 $t->data['loggedInAs'] = $server->getUserId();
 $t->data['loginURL'] = $as->getLoginURL($userBase);
@@ -65,8 +65,7 @@ $t->data['ownPage'] = $ownPage;
 $t->data['serverURL'] = $server->getServerURL();
 $t->data['trustedSites'] = $trustedSites;
 $t->data['userId'] = $userId;
-$t->data['userIdURL'] = $userBase.'/'.$userId;
+$t->data['userIdURL'] = $userBase . '/' . $userId;
 $t->data['xrdsURL'] = $xrds;
 
-$t->show();
-exit(0);
+$t->send();

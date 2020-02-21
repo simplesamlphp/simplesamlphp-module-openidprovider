@@ -27,20 +27,20 @@ $serverURL = $server->getServerURL();
 
 header('Content-Type: application/xrds+xml');
 
-echo '<?xml version="1.0" encoding="UTF-8"?>'."\n";
+echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
 echo '<xrds:XRDS xmlns:xrds="xri://$xrds" xmlns="xri://$xrd*($v*2.0)">';
 echo '<XRD>';
 echo '<Service priority="0">';
 
 foreach ($serviceTypes as $t) {
-    echo '<Type>'.htmlspecialchars($t).'</Type>';
+    echo '<Type>' . htmlspecialchars($t) . '</Type>';
 }
 
-echo '<URI>'.htmlspecialchars($serverURL).'</URI>';
+echo '<URI>' . htmlspecialchars($serverURL) . '</URI>';
 
 if ($user !== null) {
-    $localId = \SimpleSAML\Module::getModuleURL('openidProvider/user.php').'/'.$user;
-    echo '<LocalID>'.htmlspecialchars($localId).'</LocalID>';
+    $localId = \SimpleSAML\Module::getModuleURL('openidProvider/user.php') . '/' . $user;
+    echo '<LocalID>' . htmlspecialchars($localId) . '</LocalID>';
 }
 
 echo '</Service>';
