@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SimpleSAMLphp 1.15\n"
 "Report-Msgid-Bugs-To: simplesamlphp-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-02-21 19:59+0100\n"
-"PO-Revision-Date: 2020-02-21 19:59+0100\n"
+"POT-Creation-Date: 2020-03-25 17:16+0100\n"
+"PO-Revision-Date: 2020-03-25 17:16+0100\n"
 "Last-Translator: \n"
 "Language: sl\n"
 "Language-Team: \n"
@@ -16,55 +16,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-msgid "{openidProvider:title_no_user}"
-msgstr "OpenID ponudnik"
-
-msgid "{openidProvider:title_user}"
+msgid "OpenID provider"
 msgstr "OpenID za %USERID%"
 
-msgid "{openidProvider:user_page_for}"
+msgid "This is the OpenID user page for <code>%USERID%</code>."
 msgstr "To je OpenID stran uporabnika <code>%USERID%</code>."
 
-msgid "{openidProvider:view_own_page}"
+msgid "View your own OpenID page."
 msgstr "Poglejte svojo OpenID stran."
 
-msgid "{openidProvider:login_view_own_page}"
+msgid "Log in to view your own OpenID page."
 msgstr "Prijavite se in poglejte svojo OpenID stran."
 
-msgid "{openidProvider:your_identifier}"
-msgstr "Za prijavo z vašim OpenID identifikatorjem uporabite naslednje:"
-
-msgid "{openidProvider:howto_delegate}"
-msgstr ""
-"Lahko določite drug identifikator za prijavo na tem OpenID ponudniku. To "
-"storite tako da, naslednje dodate v element <code>&lt;head&gt;</code> v "
-"spletne strani tega identifikatorja."
-
-msgid "{openidProvider:logout_title}"
+msgid "Log out"
 msgstr "Odjava"
 
-msgid "{openidProvider:logout}"
+msgid "Click here to log out of your OpenID user."
 msgstr "Kliknite tukaj za odjavo OpenID uporabnika."
 
-msgid "{openidProvider:confirm_question}"
+msgid "Do you wish to log on to %SITEURL%?"
 msgstr "Ali se želite prijaviti v %SITEURL%?"
 
-msgid "{openidProvider:remember}"
+msgid "Remember this decision"
 msgstr "Zapomni si to odločitev"
 
-msgid "{openidProvider:confirm}"
+msgid "Confirm"
 msgstr "Potrdi"
 
-msgid "{openidProvider:notconfirm}"
-msgstr "Ne potrdi"
-
-msgid "{openidProvider:trustlist_trustedsites}"
+msgid "Trusted Sites"
 msgstr "Zaupanja vredne strani"
 
-msgid "{openidProvider:trustlist_remove}"
+msgid "Remove"
 msgstr "Odstrani"
 
-msgid "{openidProvider:trustlist_nosites}"
+msgid ""
+"No sites are trusted. When you authenticate with a site, "
+"you can choose to add it to this list by choosing <q>Remember this "
+"decision</q>."
 msgstr ""
 "Nobeno spletno mestno ni zaupanja vredno. Med prijavo lahko dodate "
 "spletno mesto na ta seznam z izbiro <q>Zapomni si to odločitev</q>."

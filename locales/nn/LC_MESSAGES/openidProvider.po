@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SimpleSAMLphp 1.15\n"
 "Report-Msgid-Bugs-To: simplesamlphp-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-02-21 19:59+0100\n"
-"PO-Revision-Date: 2020-02-21 19:59+0100\n"
+"POT-Creation-Date: 2020-03-25 17:16+0100\n"
+"PO-Revision-Date: 2020-03-25 17:16+0100\n"
 "Last-Translator: \n"
 "Language: nn\n"
 "Language-Team: \n"
@@ -15,55 +15,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-msgid "{openidProvider:title_no_user}"
-msgstr "OpenID tilbydar"
-
-msgid "{openidProvider:title_user}"
+msgid "OpenID provider"
 msgstr "OpenID for %USERID%"
 
-msgid "{openidProvider:user_page_for}"
+msgid "This is the OpenID user page for <code>%USERID%</code>."
 msgstr "Dette er OpenID brukersida for <code>%USERID%</code>."
 
-msgid "{openidProvider:view_own_page}"
+msgid "View your own OpenID page."
 msgstr "Sjå di OpenID-side"
 
-msgid "{openidProvider:login_view_own_page}"
+msgid "Log in to view your own OpenID page."
 msgstr "Logg inn for å sjå di OpenID-side"
 
-msgid "{openidProvider:your_identifier}"
-msgstr "For å logga inn med OpenID, bruk følgjande ID: "
-
-msgid "{openidProvider:howto_delegate}"
-msgstr ""
-"Du kan også delegera ein annan ID for bruk i denne OpenID-tilbydaren.  "
-"For å gjera det, må du leggja til det som står under inni "
-"<code>&lt;head&gt;</code>-elementet på websida til den andre IDen: "
-
-msgid "{openidProvider:logout_title}"
+msgid "Log out"
 msgstr "Logg ut"
 
-msgid "{openidProvider:logout}"
+msgid "Click here to log out of your OpenID user."
 msgstr "Klikk her for å logga ut med din OpenID-brukar"
 
-msgid "{openidProvider:confirm_question}"
+msgid "Do you wish to log on to %SITEURL%?"
 msgstr "Ønskjer du å logga inn til %SITEURL%?"
 
-msgid "{openidProvider:remember}"
+msgid "Remember this decision"
 msgstr "Hugs denne avgjerda"
 
-msgid "{openidProvider:confirm}"
+msgid "Confirm"
 msgstr "Stadfest"
 
-msgid "{openidProvider:notconfirm}"
-msgstr "Stadfesting ikkje"
-
-msgid "{openidProvider:trustlist_trustedsites}"
+msgid "Trusted Sites"
 msgstr "Tiltrudde partnarar"
 
-msgid "{openidProvider:trustlist_remove}"
+msgid "Remove"
 msgstr "Ta vekk"
 
-msgid "{openidProvider:trustlist_nosites}"
+msgid ""
+"No sites are trusted. When you authenticate with a site, "
+"you can choose to add it to this list by choosing <q>Remember this "
+"decision</q>."
 msgstr ""
 "Ingen tenester er lagra.  Når du logger inn på ei teneste, kan du velja å"
 " leggja ho inn på lista over tiltrudde partnarar ved å velja <q>Hugs "

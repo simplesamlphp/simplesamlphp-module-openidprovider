@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SimpleSAMLphp 1.15\n"
 "Report-Msgid-Bugs-To: simplesamlphp-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-02-21 19:59+0100\n"
-"PO-Revision-Date: 2020-02-21 19:59+0100\n"
+"POT-Creation-Date: 2020-03-25 17:16+0100\n"
+"PO-Revision-Date: 2020-03-25 17:16+0100\n"
 "Last-Translator: \n"
 "Language: lv\n"
 "Language-Team: \n"
@@ -16,57 +16,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-msgid "{openidProvider:title_no_user}"
-msgstr "OpenID piegādātājs"
-
-msgid "{openidProvider:title_user}"
+msgid "OpenID provider"
 msgstr "OpenID priekš %USERID%"
 
-msgid "{openidProvider:user_page_for}"
+msgid "This is the OpenID user page for <code>%USERID%</code>."
 msgstr "Šī ir OpenID lietotāja lapa priekš <code>%USERID%</code>."
 
-msgid "{openidProvider:view_own_page}"
+msgid "View your own OpenID page."
 msgstr "Skatiet savu OpenID lapu."
 
-msgid "{openidProvider:login_view_own_page}"
+msgid "Log in to view your own OpenID page."
 msgstr "Pieslēdzieties pie savas OpenID lapas."
 
-msgid "{openidProvider:your_identifier}"
-msgstr ""
-"Lai pieslēgtos ar Jūsu OpenID identifikatoru, izmantojiet šo "
-"identifikatoru:"
-
-msgid "{openidProvider:howto_delegate}"
-msgstr ""
-"Jūs varat arī deleģēt citu identifikatoru šī OpenID piedāvātāja "
-"izmantošanai. Lai to izdarītu, identifikatora interneta lapā pie "
-"<code>&lt;head&gt;</code>-elementa Jums jāpievieno sekojošais:"
-
-msgid "{openidProvider:logout_title}"
+msgid "Log out"
 msgstr "Atslēgties"
 
-msgid "{openidProvider:logout}"
+msgid "Click here to log out of your OpenID user."
 msgstr "Klikšķiniet šeit, lai atslēgtos."
 
-msgid "{openidProvider:confirm_question}"
+msgid "Do you wish to log on to %SITEURL%?"
 msgstr "Vai vēlaties pieslēgties pie %SITEURL%?"
 
-msgid "{openidProvider:remember}"
+msgid "Remember this decision"
 msgstr "Atcerēties šo izvēli"
 
-msgid "{openidProvider:confirm}"
+msgid "Confirm"
 msgstr "Piekrist"
 
-msgid "{openidProvider:notconfirm}"
-msgstr "Nepiekrist"
-
-msgid "{openidProvider:trustlist_trustedsites}"
+msgid "Trusted Sites"
 msgstr "Uzticamās vietnes"
 
-msgid "{openidProvider:trustlist_remove}"
+msgid "Remove"
 msgstr "Dzēst"
 
-msgid "{openidProvider:trustlist_nosites}"
+msgid ""
+"No sites are trusted. When you authenticate with a site, "
+"you can choose to add it to this list by choosing <q>Remember this "
+"decision</q>."
 msgstr ""
 "Nav uzticamu vietņu. Kad autentificējaties šajā vietnē, varat to "
 "pievienot sarakstam izvēloties <q>Atcerēties šo izvēli</q>."

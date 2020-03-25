@@ -18,13 +18,13 @@
 <h3>Using your OpenID</h3>
 
 <p>
-  {{ '{openidProvider:openidProvider:your_identifier}'|trans }}
+  {{ 'To log in with your OpenID identifier, use the following identifier:'|trans }}
   <br />
   <code>{{ userIdURL|escape('html') }}</code>
 </p>
 
 <p>
-  {{ '{openidProvider:openidProvider:howto_delegate}'|trans }}
+  {{ 'You can also delegate a different identifier to use this OpenID provider. To do that, you need to add the following to the <code>&lt;head&gt;<\/code>-element on the webpage of that identifier:'|trans }}
   <br />
   <pre>
     <link rel="openid.server" href="{{ serverURL|escape('html') }}" />
@@ -38,7 +38,7 @@
   </pre>
 </p>
 
-<h3>{{ '{openidProvider:openidProvider:trustlist_trustedsites}'|trans }}</h3>
+<h3>{{ 'Trusted Sites'|trans }}</h3>
 
 {% if trustedSites|length > 0 %}
 
@@ -47,7 +47,7 @@
     <ul>
 {% for hex, site in trustedSites %}
       <li>
-        <input type="submit" name="{{ 'remove_' ~ hex }}" value="{{ '{openidProvider:openidProvider:trustlist_remove}'|trans }}" />
+        <input type="submit" name="{{ 'remove_' ~ hex }}" value="{{ 'Remove'|trans }}" />
         <code>{{ site|escape('html') }}</code>
       </li>
 {% endfor %}
@@ -55,12 +55,12 @@
   </form>
 </div>
 {% else %}
-<p>{{ '{openidProvider:openidProvider:trustlist_nosites}'|trans }}</p>
+<p>{{ 'No sites are trusted. When you authenticate with a site, you can choose to add it to this list by choosing <q>Remember this decision<\/q>.'|trans }}</p>
 {% endif %}
 
-<h3>{{ '{openidProvider:openidProvider:logout_title}'|trans }}</h3>
+<h3>{{ 'Log out'|trans }}</h3>
 <p>
-  <a href="{{ logoutURL|escape('html') }}">{{ '{openidProvider:openidProvider:logout}'|trans }}</a>
+  <a href="{{ logoutURL|escape('html') }}">{{ 'Click here to log out of your OpenID user.'|trans }}</a>
 </p>
 {% endif %}
 

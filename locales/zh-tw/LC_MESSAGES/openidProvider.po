@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SimpleSAMLphp 1.15\n"
 "Report-Msgid-Bugs-To: simplesamlphp-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-02-21 19:59+0100\n"
-"PO-Revision-Date: 2020-02-21 19:59+0100\n"
+"POT-Creation-Date: 2020-03-25 17:16+0100\n"
+"PO-Revision-Date: 2020-03-25 17:16+0100\n"
 "Last-Translator: \n"
 "Language: zh_Hant_TW\n"
 "Language-Team: \n"
@@ -15,51 +15,42 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-msgid "{openidProvider:title_no_user}"
-msgstr "OpenID 提供者"
-
-msgid "{openidProvider:title_user}"
+msgid "OpenID provider"
 msgstr "OpenID for %USERID%"
 
-msgid "{openidProvider:user_page_for}"
+msgid "This is the OpenID user page for <code>%USERID%</code>."
 msgstr "這是 OpenID <code>%USERID%</code> 的使用者介面。"
 
-msgid "{openidProvider:view_own_page}"
+msgid "View your own OpenID page."
 msgstr "檢視您的 OpenID 頁面。"
 
-msgid "{openidProvider:login_view_own_page}"
+msgid "Log in to view your own OpenID page."
 msgstr "登入以檢視您的 OpenID 頁面。"
 
-msgid "{openidProvider:your_identifier}"
-msgstr "若要登入 OpenID 識別，使用下列識別："
-
-msgid "{openidProvider:howto_delegate}"
-msgstr "您亦可於 OpenID 提供者使用不同身分識別。若需如此，請新增這個識別標籤 <code>&lt;head&gt;</code>-元件至您的網頁："
-
-msgid "{openidProvider:logout_title}"
+msgid "Log out"
 msgstr "登出"
 
-msgid "{openidProvider:logout}"
+msgid "Click here to log out of your OpenID user."
 msgstr "按這裡登出您的 OpenID 使用者。"
 
-msgid "{openidProvider:confirm_question}"
+msgid "Do you wish to log on to %SITEURL%?"
 msgstr "您想登入下列網址 %SITEURL% ？"
 
-msgid "{openidProvider:remember}"
+msgid "Remember this decision"
 msgstr "記住這個決定"
 
-msgid "{openidProvider:confirm}"
+msgid "Confirm"
 msgstr "確認"
 
-msgid "{openidProvider:notconfirm}"
-msgstr "不確認"
-
-msgid "{openidProvider:trustlist_trustedsites}"
+msgid "Trusted Sites"
 msgstr "信任站台"
 
-msgid "{openidProvider:trustlist_remove}"
+msgid "Remove"
 msgstr "移除"
 
-msgid "{openidProvider:trustlist_nosites}"
+msgid ""
+"No sites are trusted. When you authenticate with a site, "
+"you can choose to add it to this list by choosing <q>Remember this "
+"decision</q>."
 msgstr "沒有任何信任站台。當你於站台認證，您可點選 <q>記住這個決定</q> 加入該站至這個清單裡"
 

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SimpleSAMLphp 1.15\n"
 "Report-Msgid-Bugs-To: simplesamlphp-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-02-21 19:59+0100\n"
-"PO-Revision-Date: 2020-02-21 19:59+0100\n"
+"POT-Creation-Date: 2020-03-25 17:16+0100\n"
+"PO-Revision-Date: 2020-03-25 17:16+0100\n"
 "Last-Translator: \n"
 "Language: he\n"
 "Language-Team: \n"
@@ -15,54 +15,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-msgid "{openidProvider:title_no_user}"
-msgstr "ספק OpenID"
-
-msgid "{openidProvider:title_user}"
+msgid "OpenID provider"
 msgstr "OpenID עבור %USERID%"
 
-msgid "{openidProvider:user_page_for}"
+msgid "This is the OpenID user page for <code>%USERID%</code>."
 msgstr "<code>%USERID%</code>. זהו דף המשתמש  OpenID עבור "
 
-msgid "{openidProvider:view_own_page}"
+msgid "View your own OpenID page."
 msgstr "הצג את דף ה OpenID שלך"
 
-msgid "{openidProvider:login_view_own_page}"
+msgid "Log in to view your own OpenID page."
 msgstr "התחבר למערכת כדי לראות את דף ה OpenID שלך"
 
-msgid "{openidProvider:your_identifier}"
-msgstr "כדי להתחבר עם מזהה OpenID, השתמש במזהה הבא:"
-
-msgid "{openidProvider:howto_delegate}"
-msgstr ""
-"אתה יכול להסמיך מזהה שונה להשתמש בספק OpenID <code>&lt;head&gt;</code> "
-"לדף הבית של המזהה המבוקש: הנוכחי. בשביל כך, אתה צריך להוסיף רת אלמנט "
-
-msgid "{openidProvider:logout_title}"
+msgid "Log out"
 msgstr "התנתקות"
 
-msgid "{openidProvider:logout}"
+msgid "Click here to log out of your OpenID user."
 msgstr "לחץ כאו כדי להתנתק ממשתמש ה OpenID שלך."
 
-msgid "{openidProvider:confirm_question}"
+msgid "Do you wish to log on to %SITEURL%?"
 msgstr "האם ברצונך להתחבר ל %SITEURL%?"
 
-msgid "{openidProvider:remember}"
+msgid "Remember this decision"
 msgstr "זכור את ההחלטה"
 
-msgid "{openidProvider:confirm}"
+msgid "Confirm"
 msgstr "אשר"
 
-msgid "{openidProvider:notconfirm}"
-msgstr "אל תאשר"
-
-msgid "{openidProvider:trustlist_trustedsites}"
+msgid "Trusted Sites"
 msgstr "אתרים מהימנים"
 
-msgid "{openidProvider:trustlist_remove}"
+msgid "Remove"
 msgstr "הסר"
 
-msgid "{openidProvider:trustlist_nosites}"
+msgid ""
+"No sites are trusted. When you authenticate with a site, "
+"you can choose to add it to this list by choosing <q>Remember this "
+"decision</q>."
 msgstr ""
 "אין אתרים מהמנים. כאשר תזדהה עם אתר, אתה יכול לבחור להוסיף אותו לרשימה זו"
 " על ידי בחירת <q>זכור את ההחלטה</q>."

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SimpleSAMLphp 1.15\n"
 "Report-Msgid-Bugs-To: simplesamlphp-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-02-21 19:59+0100\n"
-"PO-Revision-Date: 2020-02-21 19:59+0100\n"
+"POT-Creation-Date: 2020-03-25 17:16+0100\n"
+"PO-Revision-Date: 2020-03-25 17:16+0100\n"
 "Last-Translator: \n"
 "Language: eu\n"
 "Language-Team: \n"
@@ -15,57 +15,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-msgid "{openidProvider:title_no_user}"
-msgstr "OpenID hornitzailea"
-
-msgid "{openidProvider:title_user}"
+msgid "OpenID provider"
 msgstr "OpenID %USERID%(r)entzat"
 
-msgid "{openidProvider:user_page_for}"
+msgid "This is the OpenID user page for <code>%USERID%</code>."
 msgstr "Hau erabiltzailearen OpenID orria da <code>%USERID%</code>(r)entzat."
 
-msgid "{openidProvider:view_own_page}"
+msgid "View your own OpenID page."
 msgstr "Bistaratu zure OpenID orria."
 
-msgid "{openidProvider:login_view_own_page}"
+msgid "Log in to view your own OpenID page."
 msgstr "Sartu zure OpenID orria ikusteko."
 
-msgid "{openidProvider:your_identifier}"
-msgstr ""
-"Zure OpenID identifikadorearekin sartzeko, erabil ezazu identifikadore "
-"hau:"
-
-msgid "{openidProvider:howto_delegate}"
-msgstr ""
-"Identifikadore ezberdin bat ere erabil dezakezu OpenID hornitzaile hau "
-"erabiltzeko. Horretarako <code>&lt;head&gt;</code> elementuari hurrengoa "
-"identifikadorearen orrian gehitu behar diozu:"
-
-msgid "{openidProvider:logout_title}"
+msgid "Log out"
 msgstr "Saioa itxi"
 
-msgid "{openidProvider:logout}"
+msgid "Click here to log out of your OpenID user."
 msgstr "Sakatu hemen zure OpenID erabiltzailetik irteteko"
 
-msgid "{openidProvider:confirm_question}"
+msgid "Do you wish to log on to %SITEURL%?"
 msgstr "%SITEURL%(e)an sartu nahi al duzu?"
 
-msgid "{openidProvider:remember}"
+msgid "Remember this decision"
 msgstr "Gogoratu erabaki hau"
 
-msgid "{openidProvider:confirm}"
+msgid "Confirm"
 msgstr "Berretsi"
 
-msgid "{openidProvider:notconfirm}"
-msgstr "Ez berretsi"
-
-msgid "{openidProvider:trustlist_trustedsites}"
+msgid "Trusted Sites"
 msgstr "Gune fidagarriak"
 
-msgid "{openidProvider:trustlist_remove}"
+msgid "Remove"
 msgstr "Ezabatu"
 
-msgid "{openidProvider:trustlist_nosites}"
+msgid ""
+"No sites are trusted. When you authenticate with a site, "
+"you can choose to add it to this list by choosing <q>Remember this "
+"decision</q>."
 msgstr ""
 "Ez dago gune fidagarririk. Gune batean kautotzen zarenean zerrenda "
 "honetara gehitzea hautatu dezakezu <q>Gogoratu erabaki hau</q> hautatuz."

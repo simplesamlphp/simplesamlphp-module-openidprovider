@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SimpleSAMLphp 1.15\n"
 "Report-Msgid-Bugs-To: simplesamlphp-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-02-21 19:59+0100\n"
-"PO-Revision-Date: 2020-02-21 19:59+0100\n"
+"POT-Creation-Date: 2020-03-25 17:16+0100\n"
+"PO-Revision-Date: 2020-03-25 17:16+0100\n"
 "Last-Translator: \n"
 "Language: ar\n"
 "Language-Team: \n"
@@ -16,54 +16,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-msgid "{openidProvider:title_no_user}"
-msgstr "مزود ال OpenID"
-
-msgid "{openidProvider:title_user}"
+msgid "OpenID provider"
 msgstr "%USERID% ل OpenID"
 
-msgid "{openidProvider:user_page_for}"
+msgid "This is the OpenID user page for <code>%USERID%</code>."
 msgstr "صفحة المستخدم ل OpenID <code>%USERID%</code>"
 
-msgid "{openidProvider:view_own_page}"
+msgid "View your own OpenID page."
 msgstr "شاهد صفحتي ب OpenID"
 
-msgid "{openidProvider:login_view_own_page}"
+msgid "Log in to view your own OpenID page."
 msgstr "قم بتسجيل الدخول لتشاهد صفحتك ب OpenID"
 
-msgid "{openidProvider:your_identifier}"
-msgstr "للدخول مستخدما ً اسم دخولك ل OpenID, استخدم التعريف أدناه "
-
-msgid "{openidProvider:howto_delegate}"
-msgstr ""
-"يمكنك استخدام تعريف اخر للدخول لهذا الموقع، للقيام بذلك قم بإضافة الآتي "
-"<code>&lt;head&gt;</code>-element لمتصفحك"
-
-msgid "{openidProvider:logout_title}"
+msgid "Log out"
 msgstr "تسجيل الخروج"
 
-msgid "{openidProvider:logout}"
+msgid "Click here to log out of your OpenID user."
 msgstr "اضغط لتخرج من OpenID خاصتك"
 
-msgid "{openidProvider:confirm_question}"
+msgid "Do you wish to log on to %SITEURL%?"
 msgstr "هل ترغب بتسجيل الدخول ل %SITEURL%?"
 
-msgid "{openidProvider:remember}"
+msgid "Remember this decision"
 msgstr "تذكر هذا القرار"
 
-msgid "{openidProvider:confirm}"
+msgid "Confirm"
 msgstr "تاكيدالقرارات كيد"
 
-msgid "{openidProvider:notconfirm}"
-msgstr "لا تؤكد"
-
-msgid "{openidProvider:trustlist_trustedsites}"
+msgid "Trusted Sites"
 msgstr "موقع موثوق به"
 
-msgid "{openidProvider:trustlist_remove}"
+msgid "Remove"
 msgstr " امسح"
 
-msgid "{openidProvider:trustlist_nosites}"
+msgid ""
+"No sites are trusted. When you authenticate with a site, "
+"you can choose to add it to this list by choosing <q>Remember this "
+"decision</q>."
 msgstr ""
 "لا توجد مواقع موثوق بها. عندما تقوم بالتصديق علي احد المواقع، يمكنك "
 "إضافته للقائمة باختيار <q>remember this decision</q>."

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SimpleSAMLphp 1.15\n"
 "Report-Msgid-Bugs-To: simplesamlphp-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-02-21 19:59+0100\n"
-"PO-Revision-Date: 2020-02-21 19:59+0100\n"
+"POT-Creation-Date: 2020-03-25 17:16+0100\n"
+"PO-Revision-Date: 2020-03-25 17:16+0100\n"
 "Last-Translator: \n"
 "Language: et\n"
 "Language-Team: \n"
@@ -15,57 +15,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-msgid "{openidProvider:title_no_user}"
-msgstr "OpenID pakkuja"
-
-msgid "{openidProvider:title_user}"
+msgid "OpenID provider"
 msgstr "OpenID %USERID%"
 
-msgid "{openidProvider:user_page_for}"
+msgid "This is the OpenID user page for <code>%USERID%</code>."
 msgstr "See on OpenID kasutajaleht kasutajale <code>%USERID%</code>."
 
-msgid "{openidProvider:view_own_page}"
+msgid "View your own OpenID page."
 msgstr "Näita enda OpenID lehekülge."
 
-msgid "{openidProvider:login_view_own_page}"
+msgid "Log in to view your own OpenID page."
 msgstr "Logi sisse oma OpenID lehekülje nägemiseks."
 
-msgid "{openidProvider:your_identifier}"
-msgstr ""
-"Kasuta järgnevat identifikaatorit oma OpenID identifikaatoriga sisse "
-"logimiseks:"
-
-msgid "{openidProvider:howto_delegate}"
-msgstr ""
-"Võid delegeerida ka muu identifikaatori seda OpenID pakkujat kasutama. "
-"Selle tegemiseks pead lisama järgneva koodi selle indetifikaatori "
-"veebilehekülje <code>&lt;head&gt;</code>-elementi."
-
-msgid "{openidProvider:logout_title}"
+msgid "Log out"
 msgstr "Logi välja"
 
-msgid "{openidProvider:logout}"
+msgid "Click here to log out of your OpenID user."
 msgstr "Klõpsa siia oma OpenID kasutajast välja logimiseks."
 
-msgid "{openidProvider:confirm_question}"
+msgid "Do you wish to log on to %SITEURL%?"
 msgstr "Kas sa soovid logida sisse leheküljele %SITEURL%?"
 
-msgid "{openidProvider:remember}"
+msgid "Remember this decision"
 msgstr "Jäta see otsus meelde"
 
-msgid "{openidProvider:confirm}"
+msgid "Confirm"
 msgstr "Kinnita"
 
-msgid "{openidProvider:notconfirm}"
-msgstr "Ära kinnita"
-
-msgid "{openidProvider:trustlist_trustedsites}"
+msgid "Trusted Sites"
 msgstr "Usaldatavad leheküljed"
 
-msgid "{openidProvider:trustlist_remove}"
+msgid "Remove"
 msgstr "Eemalda"
 
-msgid "{openidProvider:trustlist_nosites}"
+msgid ""
+"No sites are trusted. When you authenticate with a site, "
+"you can choose to add it to this list by choosing <q>Remember this "
+"decision</q>."
 msgstr ""
 "Ühtegi lehekülge ei usaldata. Kui sa autendid mingil leheküljel, siis "
 "saad lisada seda nimekirja, valides <q>Jäta see otsus meelde</q>."

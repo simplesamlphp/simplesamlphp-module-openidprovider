@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SimpleSAMLphp 1.15\n"
 "Report-Msgid-Bugs-To: simplesamlphp-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-02-21 19:59+0100\n"
-"PO-Revision-Date: 2020-02-21 19:59+0100\n"
+"POT-Creation-Date: 2020-03-25 17:16+0100\n"
+"PO-Revision-Date: 2020-03-25 17:16+0100\n"
 "Last-Translator: \n"
 "Language: sv\n"
 "Language-Team: \n"
@@ -15,55 +15,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-msgid "{openidProvider:title_no_user}"
-msgstr "OpenID-leverantör"
-
-msgid "{openidProvider:title_user}"
+msgid "OpenID provider"
 msgstr "OpenID för %USERID%"
 
-msgid "{openidProvider:user_page_for}"
+msgid "This is the OpenID user page for <code>%USERID%</code>."
 msgstr "Detta är OpenID-användarsida för <code>%USERID%</code>."
 
-msgid "{openidProvider:view_own_page}"
+msgid "View your own OpenID page."
 msgstr "Visa din egen OpenID-sida."
 
-msgid "{openidProvider:login_view_own_page}"
+msgid "Log in to view your own OpenID page."
 msgstr "Logga in för att se din egen OpenID-sida."
 
-msgid "{openidProvider:your_identifier}"
-msgstr "För att logga in med din OpenID-leverantör använd följande identifierare:"
-
-msgid "{openidProvider:howto_delegate}"
-msgstr ""
-"Du kan också delegera till en annan identifierare att använda denna "
-"OpenID-leverantör. För att göra detta måste du lägga till följande till "
-"<code>&lt;head&gt;</code>-elementet på webbsidan för den identifieraren:"
-
-msgid "{openidProvider:logout_title}"
+msgid "Log out"
 msgstr "Logga ut"
 
-msgid "{openidProvider:logout}"
+msgid "Click here to log out of your OpenID user."
 msgstr "Klicka här för att logga ut från din OpenID-användare."
 
-msgid "{openidProvider:confirm_question}"
+msgid "Do you wish to log on to %SITEURL%?"
 msgstr "Vill du logga in på %SITEURL%?"
 
-msgid "{openidProvider:remember}"
+msgid "Remember this decision"
 msgstr "Spara detta beslut"
 
-msgid "{openidProvider:confirm}"
+msgid "Confirm"
 msgstr "Bekräfta"
 
-msgid "{openidProvider:notconfirm}"
-msgstr "Bekräfta inte"
-
-msgid "{openidProvider:trustlist_trustedsites}"
+msgid "Trusted Sites"
 msgstr "Godkända sajter"
 
-msgid "{openidProvider:trustlist_remove}"
+msgid "Remove"
 msgstr "Ta bort"
 
-msgid "{openidProvider:trustlist_nosites}"
+msgid ""
+"No sites are trusted. When you authenticate with a site, "
+"you can choose to add it to this list by choosing <q>Remember this "
+"decision</q>."
 msgstr ""
 "Inga sajter är sparade. När du loggar in på en sajt kan du välja om du "
 "ska lägga den i listan genom att välja <q>Spara detta beslut</q>."

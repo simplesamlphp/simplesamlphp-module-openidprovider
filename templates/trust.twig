@@ -10,10 +10,10 @@
   <form method="post" action="?">
     <input type="hidden" name="StateID" value="{{ StateID }}" />
     <input type="checkbox" name="TrustRemember" value="on" id="remember" />
-    <label for="TrustRemember">{{ '{openidProvider:openidProvider:remember}'|trans }}</label>
+    <label for="TrustRemember">{{ 'Remember this decision'|trans }}</label>
     <br />
-    <input type="submit" name="TrustYes" value="{{ '{openidProvider:openidProvider:confirm}'|trans }}" />
-    <input type="submit" name="TrustNo" value="{{ '{openidProvider:openidProvider:notconfirm}'||trans }}" />
+    <input type="submit" name="TrustYes" value="{{ 'Confirm'|trans }}" />
+    <input type="submit" name="TrustNo" value="{{ 'Do not confirm'||trans }}" />
   </form>
 </div>
 

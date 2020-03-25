@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SimpleSAMLphp 1.15\n"
 "Report-Msgid-Bugs-To: simplesamlphp-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-02-21 19:59+0100\n"
-"PO-Revision-Date: 2020-02-21 19:59+0100\n"
+"POT-Creation-Date: 2020-03-25 17:16+0100\n"
+"PO-Revision-Date: 2020-03-25 17:16+0100\n"
 "Last-Translator: \n"
 "Language: da\n"
 "Language-Team: \n"
@@ -15,55 +15,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-msgid "{openidProvider:title_no_user}"
-msgstr "OpenID udbyder"
-
-msgid "{openidProvider:title_user}"
+msgid "OpenID provider"
 msgstr "OpenID for %USERID%"
 
-msgid "{openidProvider:user_page_for}"
+msgid "This is the OpenID user page for <code>%USERID%</code>."
 msgstr "Dette er OpenID brugersiden for <code>%USERID%</code>."
 
-msgid "{openidProvider:view_own_page}"
+msgid "View your own OpenID page."
 msgstr "Se din egen OpenID side."
 
-msgid "{openidProvider:login_view_own_page}"
+msgid "Log in to view your own OpenID page."
 msgstr "Log ind for at se dine egen OpenID side."
 
-msgid "{openidProvider:your_identifier}"
-msgstr "For at logge ind med OpenID, brug følgende ID:"
-
-msgid "{openidProvider:howto_delegate}"
-msgstr ""
-"Du kan også bruge et andet ID til denne OpenID udbyder. For at gøre "
-"dette, skal du tilføje følgende til <code>&lt;head&gt;</code>-element på "
-"websiden for dette ID:"
-
-msgid "{openidProvider:logout_title}"
+msgid "Log out"
 msgstr "Log ud"
 
-msgid "{openidProvider:logout}"
+msgid "Click here to log out of your OpenID user."
 msgstr "Klik her for at logge din OpenID bruger ud."
 
-msgid "{openidProvider:confirm_question}"
+msgid "Do you wish to log on to %SITEURL%?"
 msgstr "Vil du logge ind til %SITEURL%?"
 
-msgid "{openidProvider:remember}"
+msgid "Remember this decision"
 msgstr "Husk dette"
 
-msgid "{openidProvider:confirm}"
+msgid "Confirm"
 msgstr "Bekræft"
 
-msgid "{openidProvider:notconfirm}"
-msgstr "Bekræft ikke"
-
-msgid "{openidProvider:trustlist_trustedsites}"
+msgid "Trusted Sites"
 msgstr "Hjemmesider du har tillid til"
 
-msgid "{openidProvider:trustlist_remove}"
+msgid "Remove"
 msgstr "Fjern"
 
-msgid "{openidProvider:trustlist_nosites}"
+msgid ""
+"No sites are trusted. When you authenticate with a site, "
+"you can choose to add it to this list by choosing <q>Remember this "
+"decision</q>."
 msgstr ""
 "Der er ikke gemt nogle sites. Når authenticater mod et site kan du vælge "
 "at gemme sitet i denne liste ved at vælge <q>Gem mit valg</q>"
