@@ -8,7 +8,7 @@
 <p>{{ '{openidProvider:openidProvider:user_page_for}'|trans({'%USERID%', userId|escape('html')}) }}.</p>
 {% endif %}
 
-{% if $loggedInAs is defined %}
+{% if loggedInAs is defined %}
 <p><a href="{{ loginURL|escape('html') }}">{{ '{openidProvider:openidProvider:login_view_own_page}'|trans }}</a></p>
 {% elseif ownPage != true) {
 <p><a href="{{ identity|escape('html') }}">{{ '{openidProvider:openidProvider:view_own_page}'|trans }}</a></p>
@@ -45,9 +45,9 @@
 <div class="form">
   <form method="post" action="?">
     <ul>
-{% for site in trustedSites %}
+{% for hex, site in trustedSites %}
       <li>
-        <input type="submit" name="remove_'.bin2hex($site).'" value="{{ '{openidProvider:openidProvider:trustlist_remove}'|trans }}" />
+        <input type="submit" name="{{ 'remove_' ~ hex }}" value="{{ '{openidProvider:openidProvider:trustlist_remove}'|trans }}" />
         <code>{{ site|escape('html') }}</code>
       </li>
 {% endfor %}

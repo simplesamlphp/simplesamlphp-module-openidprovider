@@ -43,7 +43,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 if ($ownPage) {
+    $newSites = [];
     $trustedSites = $server->getTrustRoots($identity);
+    foreach ($trustedSites as $i => $site) {
+        $newSites[bin2hex($site)] = $site;
+    }
+    $trustedSites = $newSites;
 } else {
     $trustedSites = [];
 }
