@@ -55,6 +55,8 @@ if ($userId !== false) {
     $xrds = \SimpleSAML\Utils\HTTP::addURLParameters($xrds, array('user' => $userId));
 }
 
+header('X-XRDS-Location: ' . $xrds);
+
 $as = $server->getAuthSource();
 $t = new \SimpleSAML\XHTML\Template($globalConfig, 'openidProvider:user.twig');
 $t->data['identity'] = $identity;
@@ -66,6 +68,5 @@ $t->data['serverURL'] = $server->getServerURL();
 $t->data['trustedSites'] = $trustedSites;
 $t->data['userId'] = $userId;
 $t->data['userIdURL'] = $userBase . '/' . $userId;
-$t->data['xrdsURL'] = $xrds;
 
 $t->send();

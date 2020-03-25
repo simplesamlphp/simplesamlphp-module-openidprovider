@@ -1,0 +1,67 @@
+{% extends "base.twig" %}
+{% set pagetitle = 'OpenID Provider' %}
+{% block content %}
+
+<h2>{{ pagetitle }}</h2>
+
+{% if userId != false %}
+<p>{{ '{openidProvider:openidProvider:user_page_for}'|trans({'%USERID%', userId|escape('html')}) }}.</p>
+{% endif %}
+
+{% if $loggedInAs is defined %}
+<p><a href="{{ loginURL|escape('html') }}">{{ '{openidProvider:openidProvider:login_view_own_page}'|trans }}</a></p>
+{% elseif ownPage != true) {
+<p><a href="{{ identity|escape('html') }}">{{ '{openidProvider:openidProvider:view_own_page}'|trans }}</a></p>
+{% endif %}
+
+{% if ownPage == true %}
+<h3>Using your OpenID</h3>
+
+<p>
+  {{ '{openidProvider:openidProvider:your_identifier}'|trans }}
+  <br />
+  <code>{{ userIdURL|escape('html') }}</code>
+</p>
+
+<p>
+  {{ '{openidProvider:openidProvider:howto_delegate}'|trans }}
+  <br />
+  <pre>
+    <link rel="openid.server" href="{{ serverURL|escape('html') }}" />
+    <br />
+    <link rel="openid2.provider" href="{[ serverURL|escape('html') }}" />
+  </pre>
+  <pre>
+    <link rel="openid.delegate" href="{{ userIdURL|escape('html') }}" />
+    <br />
+    <link rel="openid2.local_id" href="{{ userIdURL|escape('html') }}" />
+  </pre>
+</p>
+
+<h3>{{ '{openidProvider:openidProvider:trustlist_trustedsites}'|trans }}</h3>
+
+{% if trustedSites|length > 0 %}
+
+<div class="form">
+  <form method="post" action="?">
+    <ul>
+{% for site in trustedSites %}
+      <li>
+        <input type="submit" name="remove_'.bin2hex($site).'" value="{{ '{openidProvider:openidProvider:trustlist_remove}'|trans }}" />
+        <code>{{ site|escape('html') }}</code>
+      </li>
+{% endfor %}
+    </ul>
+  </form>
+</div>
+{% else %}
+<p>{{ '{openidProvider:openidProvider:trustlist_nosites}'|trans }}</p>
+{% endif %}
+
+<h3>{{ '{openidProvider:openidProvider:logout_title}'|trans }}</h3>
+<p>
+  <a href="{{ logoutURL|escape('html') }}">{{ '{openidProvider:openidProvider:logout}'|trans }}</a>
+</p>
+{% endif %}
+
+{% endblock %}
