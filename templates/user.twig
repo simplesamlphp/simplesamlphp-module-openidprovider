@@ -5,7 +5,7 @@
 <h2>{{ pagetitle }}</h2>
 
 {% if userId != false %}
-<p>{{ 'This is the OpenID user page for <code>%USERID%<\/code>.'|trans({'%USERID%': userId|escape('html')}) }}.</p>
+<p>{{ 'This is the OpenID user page for <code>%USERID%</code>.'|trans({'%USERID%': userId|escape('html')})|raw }}.</p>
 {% endif %}
 
 {% if loggedInAs is defined %}
@@ -18,22 +18,15 @@
 <h3>Using your OpenID</h3>
 
 <p>
-  {{ 'To log in with your OpenID identifier, use the following identifier:'|trans }}
+  {{ 'To log in with your OpenID identifier, use the following identifier:'|trans|raw }}
   <br />
   <code>{{ userIdURL|escape('html') }}</code>
-</p>
-
-<p>
-  {{ 'You can also delegate a different identifier to use this OpenID provider. To do that, you need to add the following to the <code>&lt;head&gt;<\/code>-element on the webpage of that identifier:'|trans }}
-  <br />
   <pre>
     <link rel="openid.server" href="{{ serverURL|escape('html') }}" />
-    <br />
     <link rel="openid2.provider" href="{[ serverURL|escape('html') }}" />
   </pre>
   <pre>
     <link rel="openid.delegate" href="{{ userIdURL|escape('html') }}" />
-    <br />
     <link rel="openid2.local_id" href="{{ userIdURL|escape('html') }}" />
   </pre>
 </p>
@@ -55,7 +48,7 @@
   </form>
 </div>
 {% else %}
-<p>{{ 'No sites are trusted. When you authenticate with a site, you can choose to add it to this list by choosing <q>Remember this decision<\/q>.'|trans }}</p>
+<p>{{ 'No sites are trusted. When you authenticate with a site, you can choose to add it to this list by choosing <q>Remember this decision</q>.'|trans|raw }}</p>
 {% endif %}
 
 <h3>{{ 'Log out'|trans }}</h3>
