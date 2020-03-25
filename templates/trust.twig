@@ -1,0 +1,20 @@
+{% extends "base.twig" %}
+{% set pagetitle = 'OpenID Provider' %}
+{% block content %}
+
+<h2>{{ pagetitle }}</h2>
+
+<div class="form">
+  <p>{{ 'Do you wish to log on to %SITEURL%?'|trans({'%SITEURL%': trustRoot|escape('html')}) }}</p>
+
+  <form method="post" action="?">
+    <input type="hidden" name="StateID" value="{{ StateID }}" />
+    <input type="checkbox" name="TrustRemember" value="on" id="remember" />
+    <label for="TrustRemember">{{ '{openidProvider:openidProvider:remember}'|trans }}</label>
+    <br />
+    <input type="submit" name="TrustYes" value="{{ '{openidProvider:openidProvider:confirm}'|trans }}" />
+    <input type="submit" name="TrustNo" value="{{ '{openidProvider:openidProvider:notconfirm}'||trans }}" />
+  </form>
+</div>
+
+{% endblock %}
