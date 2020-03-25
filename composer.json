@@ -15,12 +15,10 @@
             "email": "andreas.solberg@uninett.no"
         }
     ],
-    "include-path": ["./vendor/openid/php-openid/Auth"],
     "autoload": {
         "psr-4": {
             "SimpleSAML\\Module\\openidprovider\\": "lib/"
-        },
-        "classmap": ["vendor/openid/php-openid/Auth/"]
+        }
     },
     "extra": {
         "ssp-mixedcase-module-name": "openidProvider"
