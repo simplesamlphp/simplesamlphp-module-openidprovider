@@ -43,7 +43,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 if ($ownPage) {
+    $newSites = [];
     $trustedSites = $server->getTrustRoots($identity);
+    foreach ($trustedSites as $i => $site) {
+        $newSites[bin2hex($site)] = $site;
+    }
+    $trustedSites = $newSites;
 } else {
     $trustedSites = [];
 }
@@ -54,6 +59,8 @@ $xrds = \SimpleSAML\Module::getModuleURL('openidProvider/xrds.php');
 if ($userId !== false) {
     $xrds = \SimpleSAML\Utils\HTTP::addURLParameters($xrds, array('user' => $userId));
 }
+
+header('X-XRDS-Location: ' . $xrds);
 
 $as = $server->getAuthSource();
 $t = new \SimpleSAML\XHTML\Template($globalConfig, 'openidProvider:user.twig');
@@ -66,6 +73,5 @@ $t->data['serverURL'] = $server->getServerURL();
 $t->data['trustedSites'] = $trustedSites;
 $t->data['userId'] = $userId;
 $t->data['userIdURL'] = $userBase . '/' . $userId;
-$t->data['xrdsURL'] = $xrds;
 
 $t->send();
