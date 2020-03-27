@@ -56,7 +56,7 @@ if ($userId !== false) {
 }
 
 $as = $server->getAuthSource();
-$t = new \SimpleSAML\XHTML\Template($globalConfig, 'openidProvider:user.twig');
+$t = new \SimpleSAML\XHTML\Template($globalConfig, 'openidProvider:user.tpl.php');
 $t->data['identity'] = $identity;
 $t->data['loggedInAs'] = $server->getUserId();
 $t->data['loginURL'] = $as->getLoginURL($userBase);
