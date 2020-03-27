@@ -8,30 +8,37 @@
 <p>{{ 'This is the OpenID user page for <code>%USERID%</code>.'|trans({'%USERID%': userId|escape('html')})|raw }}.</p>
 {% endif %}
 
-{% if loggedInAs is defined %}
+{% if loggedInAs != true %}
 <p><a href="{{ loginURL|escape('html') }}">{{ 'Log in to view your own OpenID page.'|trans }}</a></p>
 {% elseif ownPage != true %}
 <p><a href="{{ identity|escape('html') }}">{{ 'View your own OpenID page.'|trans }}</a></p>
 {% endif %}
 
-{% if ownPage == true %}
-<h3>Using your OpenID</h3>
+{% if ownPage != false %}
+<h2>Using your OpenID</h2>
 
 <p>
-  {{ 'To log in with your OpenID identifier, use the following identifier:'|trans|raw }}
+  {{ 'To log in with your OpenID identifier, use the following identifier:'|trans  }}
   <br />
   <code>{{ userIdURL|escape('html') }}</code>
+  <br />
+  <br />
+  {{ 'You can also delegate a different identifier to use this OpenID provider. To do that, you need to add the following to the <code>&lt;head&gt;</code>-element on the webpage of that identifier:'|trans|raw }}
+
   <pre>
-    <link rel="openid.server" href="{{ serverURL|escape('html') }}" />
-    <link rel="openid2.provider" href="{[ serverURL|escape('html') }}" />
+    <&zwj;link rel="openid.server" href="{{ serverURL|escape('html') }}" />
   </pre>
   <pre>
-    <link rel="openid.delegate" href="{{ userIdURL|escape('html') }}" />
-    <link rel="openid2.local_id" href="{{ userIdURL|escape('html') }}" />
+    <&zwj;link rel="openid2.provider" href="{{ serverURL|escape('html') }}" />
+  <pre>
+    <&zwj;link rel="openid.delegate" href="{{ userIdURL|escape('html') }}" />
+  </pre>
+  <pre>
+    <&zwj;link rel="openid2.local_id" href="{{ userIdURL|escape('html') }}" />
   </pre>
 </p>
 
-<h3>{{ 'Trusted Sites'|trans }}</h3>
+<h2>{{ 'Trusted Sites'|trans }}</h2>
 
 {% if trustedSites|length > 0 %}
 
@@ -51,7 +58,7 @@
 <p>{{ 'No sites are trusted. When you authenticate with a site, you can choose to add it to this list by choosing <q>Remember this decision</q>.'|trans|raw }}</p>
 {% endif %}
 
-<h3>{{ 'Log out'|trans }}</h3>
+<h2>{{ 'Log out'|trans }}</h2>
 <p>
   <a href="{{ logoutURL|escape('html') }}">{{ 'Click here to log out of your OpenID user.'|trans }}</a>
 </p>
