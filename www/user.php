@@ -68,4 +68,4 @@ $t->data['userId'] = $userId;
 $t->data['userIdURL'] = $userBase . '/' . $userId;
 $t->data['xrdsURL'] = $xrds;
 
-$t->send();
+$t->show();
