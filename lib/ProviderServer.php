@@ -437,12 +437,12 @@ class ProviderServer
         $attributes = $state['Attributes'];
 
         // Process SREG requests
-        $sreg_resp = Auth_OpenID_SRegResponse::extractResponse($sreg_req, $attributes);
+        $sreg_resp = \Auth_OpenID_SRegResponse::extractResponse($sreg_req, $attributes);
         $sreg_resp->toMessage($response->fields);
 
         // Process AX requests
-        if (!Auth_OpenID_AX::isError($ax_req)) {
-            $ax_resp = new Auth_OpenID_AX_FetchResponse();
+        if (!\Auth_OpenID_AX::isError($ax_req)) {
+            $ax_resp = new \Auth_OpenID_AX_FetchResponse();
             foreach ($ax_req->iterTypes() as $type_uri) {
                 if (isset($attributes[$type_uri])) {
                     $ax_resp->addValue($type_uri, $attributes[$type_uri]);
